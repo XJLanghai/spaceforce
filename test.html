@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML blink Tag</title>
+   </head>
+   <body>
+    <div id="blink">闪烁的文字</div>
+
+    <script language="javascript">
+    
+    function changeColor(){
+    
+    var color="black|rgba(0, 0, 0, 0)";
+    
+    color=color.split("|");
+    
+    document.getElementById("blink").style.color=color[parseInt(Math.random() *
+    
+    color.length)];
+    
+    }
+    
+    setInterval("changeColor()",200);
+    
+    </script>
+   </body>
+</html>
