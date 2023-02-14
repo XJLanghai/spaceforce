@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon(64x64).ico">
+        <title>Welcome to the People's Space Force</title>
+        <link rel="stylesheet" href="others/animation.css">
+        <script src="others/animation.js"></script>
+        <style>
+            body {
+                background-color: black;
+                margin: 0px;
+            }
+            a {
+                text-decoration: none;
+            }
+
+            #typing {
+                position: absolute;
+                color: rgb(240, 240, 240);
+                right: 120px;
+                top: 10vw;
+                font-family: sourcecodepro;
+                font-size: 5vw;
+            }
+            #typing div {
+                font-size: 3vw;
+            }
+            #cursor {
+                font-family: sourcecodepro;
+                font-size: 3vw;
+                color: rgb(240, 240, 240);
+                position: absolute;
+                top: 16.25vw;
+                right: 120px;
+            }
+            #main {
+                background-color: rgba(255, 255, 255, 0.8);
+                height: 100vh;
+                width: 25vw;
+                margin-left: 10vw;
+                text-align: center;
+            }
+            .lang {
+                background-color: rgb(77, 77, 77);
+                margin: 0 auto;
+                width: 10vw;
+                border:3px solid rgb(77, 77, 77);
+                transition: 0.5s;
+            }
+            .lang:hover {
+                background-color: rgb(240, 240, 240);
+                border: 3px solid skyblue;
+            }
+            .lang a div {
+                color: rgb(240, 240, 240);
+                transition: 0.5s;
+                height: 3.3vw;
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+            }
+            .lang a div:hover {
+                color: rgb(77, 77, 77);
+            }
+            
+            @font-face {
+                font-family: sourcecodepro;
+                src: url("fonts/SourceCodePro-Regular.ttf");
+            }
+            @media only screen and (max-width: 1000px) {
+                #main {
+                    width: 60vw;
+                    margin: 0 auto;
+                }
+                .lang {
+                    width: 20vw;
+                }
+                .lang a div {
+                    height: 5vw;
+                }
+                #typing {
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 750px) {
+                #main {
+                    width: 75vw;
+                    margin: 0 auto;
+                }
+                .lang {
+                    width: 40vw;
+                }
+                .lang a div {
+                    height: 10vw;
+                }
+            }
+            @media only screen and (max-width: 2280px) {  
+                #bg {
+                        background-image:url("imgs/bg1080p.png");
+                        background-size: 180vh 100vh;
+                        background-repeat: no-repeat;
+                        background-position-x: center;
+                }
+            }
+            @media only screen and (min-width: 2281px) {  
+                #bg {
+                        background-image:url("imgs/bg4k.png");
+                        background-size: 180vh 100vh;
+                        background-repeat: no-repeat;
+                        background-position-x: center;
+                }
+            }
+
+        </style>
+        <script>
+            function mouseOver_zh(){
+                document.getElementById("tex-zh").innerHTML = "你好";
+            }
+            function mouseOut_zh(){
+                document.getElementById("tex-zh").innerHTML = "中文";
+            }
+            function mouseOver_en(){
+                document.getElementById("tex-en").innerHTML = "Hello";
+            }
+            function mouseOut_en(){
+                document.getElementById("tex-en").innerHTML = "English";
+            }
+            function mouseOver_fr(){
+                document.getElementById("tex-fr").innerHTML = "Bonjour";
+            }
+            function mouseOut_fr(){
+                document.getElementById("tex-fr").innerHTML = "Français";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="bg">
+            <div id="typing">We are <br><div>the People's Space Force.&nbsp;</div></div>
+            <script>
+                var str_tp = "We are <br><div>the People's Space Force.";
+                var i_tp = 0;
+                function typing() {
+                    var divTyping = document.getElementById("typing");
+                    if (i_tp <= str_tp.length) {
+                        divTyping.innerHTML = str_tp.slice(0, i_tp++) + "_";
+                        setTimeout("typing()", 200);
+                    }
+                    else {
+                        divTyping.innerHTML = str_tp + "&nbsp;</div>";
+                    }
+                }
+                typing();
+            </script>
+            <div id="main" class="↑">
+                <div style="height: 2vw;"></div>
+                <img src="imgs/un-logo.png" alt="un-logo" width="102px">
+                <div style="height: 2vw;"></div>
+                <div class="lang">
+                    <a href="zh/">
+                        <div id="tex-zh" onmouseover="mouseOver_zh()" onmouseout="mouseOut_zh()">中文</div>
+                    </a>
+                </div>
+                <div style="height: 2vw;"></div>
+                <div class="lang">
+                    <a href="en/">
+                        <div id="tex-en" onmouseover="mouseOver_en()" onmouseout="mouseOut_en()">English</div>
+                    </a>
+                </div>
+                <div style="height: 2vw;"></div>
+                <div class="lang">
+                    <a href="fr/">
+                        <div id="tex-fr" onmouseover="mouseOver_fr()" onmouseout="mouseOut_fr()">Français</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
