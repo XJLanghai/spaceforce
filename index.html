@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="favicon(64x64).ico">
+        <link rel="shortcut icon" href="favicon.ico">
         <title>Welcome to the People's Space Force</title>
         <link rel="stylesheet" href="others/animation.css">
         <script src="others/animation.js"></script>
@@ -20,13 +20,14 @@
             #typing {
                 position: absolute;
                 color: rgb(240, 240, 240);
-                right: 120px;
+                right: 100px;
                 top: 10vw;
                 font-family: sourcecodepro;
-                font-size: 5vw;
+                font-size: 2vw;
+                text-shadow: 2px 2px rgb(77, 77, 77);
             }
             #typing div {
-                font-size: 3vw;
+                font-size: 4vw;
             }
             #cursor {
                 font-family: sourcecodepro;
@@ -97,17 +98,17 @@
                     height: 10vw;
                 }
             }
-            @media only screen and (max-width: 2280px) {  
+            @media only screen and (min-width: 2281px) {  
                 #bg {
-                        background-image:url("imgs/bg1080p.png");
+                        background-image:url("imgs/bg4k.png");
                         background-size: 180vh 100vh;
                         background-repeat: no-repeat;
                         background-position-x: center;
                 }
             }
-            @media only screen and (min-width: 2281px) {  
+            @media only screen and (max-width: 2280px) {  
                 #bg {
-                        background-image:url("imgs/bg4k.png");
+                        background-image:url("imgs/bg1080p.png");
                         background-size: 180vh 100vh;
                         background-repeat: no-repeat;
                         background-position-x: center;
@@ -140,7 +141,7 @@
         <div id="bg">
             <div id="typing">We are <br><div>the People's Space Force.&nbsp;</div></div>
             <script>
-                var str_tp = "We are <br><div>the People's Space Force.";
+                var str_tp = "From here, head to the People's Space Force - <br><div>Solar System Fleet.";
                 var i_tp = 0;
                 function typing() {
                     var divTyping = document.getElementById("typing");
@@ -156,7 +157,7 @@
             </script>
             <div id="main" class="↑">
                 <div style="height: 2vw;"></div>
-                <img src="imgs/un-logo.png" alt="un-logo" width="102px">
+                <img src="imgs/sf-logo.png" alt="spaceforce-logo" width="102px">
                 <div style="height: 2vw;"></div>
                 <div class="lang">
                     <a href="zh/">
