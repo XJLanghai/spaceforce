@@ -76,9 +76,6 @@
                 color: rgb(240, 240, 240);
             }
 
-            #main {
-                height: 200vh;
-            }
             #time {
                 font-size: 2vw;
                 font-weight: bold;
@@ -89,6 +86,9 @@
                 color: rgb(240, 240, 240);
                 width: 75vw;
                 margin-left: 12.5vw;
+            }
+            #overview {
+                float: left
             }
             .articles {
                 background-color: rgb(30, 30, 30);
@@ -127,6 +127,27 @@
                 color: white;
                 top: -5px;
                 box-shadow: 0px 1px rgba(0, 0, 0, 0.25);
+            }
+
+            #end {
+                background-color: black;
+                text-align: center;
+                color: rgb(240, 240, 240);
+                width: 100%;
+                height: 200px;
+                float: left;
+            }
+            #nav_end li {
+                margin-top: 50px;
+                display: inline-block;
+            }
+            #nav_end li a {
+                text-decoration: none;
+                color: rgb(240, 240, 240);
+            }
+            #end span a {
+                color: rgb(0, 123, 255);
+                text-decoration: none;
             }
 
             @media only screen and (max-width: 1500px) {
@@ -178,7 +199,7 @@
     <body>
         
         <a href="../index.html" target="_blank" rel="noopener noreferrer" id="logo">
-            <img src="../imgs/sf-logo - white.png" alt="spaceforce-logo">
+            <img src="../imgs/sf-logo - white.png" alt="sf-logo">
             <div id="logo_text">
                 <span id="logo_text_1">太阳系</span>
                 <br>
@@ -208,7 +229,7 @@
                     <div class="articles">
                         <h2>形成</h2>
                         <hr>
-                        <p>太阳系舰队是亚洲舰队、欧洲舰队及北美舰队的统称，三者共同组成舰队国际。舰队不属于任何国家，它们成为了独立的政治和经济实体，也像国家一样成为了联合国的成员。它们的名称只是说明各舰队的主要起源地，但......</p>
+                        <p>危机纪元初期，各大国开始建立起其太空军以创立一个太空战争的理论体系。对于这种战争，当时的人们所知为零，所以这是一个艰巨的任务，也是最基础的工作，因为未来太空舰队的建设，是要以这个理论体系为基础的......</p>
                         <br>
                         <a href="development/index.html" target="_blank" rel="noopener noreferrer">立即阅读</a>
                         <br>
@@ -217,9 +238,9 @@
                     <div class="articles">
                         <h2>机关</h2>
                         <hr>
-                        <p>三大舰队组成太阳系舰队，公元时代的行星防御理事会演变成太阳系舰队联席会议，是太阳系舰队名义上的最高指挥机构，但与联合国的情况一样，它只有协调功能，没有实际权力。其实太阳系舰队本身也是名义上的，人......</p>
+                        <p>太阳系舰队主要机关为太阳系舰队联席会议。<br>危机纪元初期，联合国在打击地球三体组织的过程中，了解到了三体文明的存在。通过截获地球三体组织与三体文明的通讯记录,知道了智子已经到达地球，锁死了......</p>
                         <br>
-                        <a href="" target="_blank" rel="noopener noreferrer">立即阅读</a>
+                        <a href="government-organ/index.html" target="_blank" rel="noopener noreferrer">立即阅读</a>
                         <br>
                         <br>
                     </div>
@@ -237,7 +258,18 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <div id="end">
+            <ul id="nav_end">
+                <li><a href="contact/index.html">联系我们</a></li> |
+                <li><a href="copyright/index.html">版权所有</a></li> |
+                <li><a href="frequently-asked-questions/index.html">常见问题解答</a></li> |
+                <li><a href="terms-of-use/index.html">使用条款</a></li> |
+                <li><a href="sponsorship/index.html">赞助</a></li>
+            </ul>
+            <span>本站由<a href="https://langhai.tk/" target="_blank" rel="noopener noreferrer">螂海</a>个人运营</span>
+        </div>
+        
     </body>
 </html>
