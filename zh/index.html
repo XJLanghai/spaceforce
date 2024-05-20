@@ -220,7 +220,22 @@
         </div>
         <div id="main">
             <div style="height: 5vw;"></div>
-            <div id="time">现在是危机纪元204年12月31日 ，<br>距离人类文明接触三体探测器不到一年。</div>
+            <div id="time">现在是危机纪元204年<span id="presentMonth"></span>月<span id="presentDay"></span>日<span id="presentHours"></span>:<span id="presentMinutes"></span>:<span id="presentSeconds"></span>（协调世界时），<br>距离人类文明接触三体探测器的时间还剩大约一年。</div>
+            <script>
+                setInterval(function () {
+                    var presentDate = new Date();
+                    var presentMonth = presentDate.getUTCMonth() + 1;
+                    var presentDay = presentDate.getUTCDate();
+                    var presentHours = presentDate.getUTCHours();
+                    var presentMinutes = presentDate.getUTCMinutes();
+                    var presentSeconds = presentDate.getUTCSeconds();
+                    document.getElementById('presentMonth').innerHTML = presentMonth;
+                    document.getElementById('presentDay').innerHTML = presentDay;
+                    document.getElementById('presentHours').innerHTML = presentHours;
+                    document.getElementById('presentMinutes').innerHTML = presentMinutes;
+                    document.getElementById('presentSeconds').innerHTML = presentSeconds;
+                }, 1000);
+            </script>
             <div style="height: 5vw;"></div>
 
             <div id="content">
